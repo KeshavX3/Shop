@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Trade Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Plastic Materials Marketplace</h1>
+        </header>
+
+        <section class="filters">
+            <input type="text" placeholder="Search for Products" id="search">
+            <select id="materialFilter">
+                <option value="all">All Materials</option>
+                <option value="hdpe">HDPE</option>
+                <option value="ppcp">PPCP</option>
+                <option value="pet">PET</option>
+                <!-- Add more filters as needed -->
+            </select>
+        </section>
+
+        <form id="itemForm" enctype="multipart/form-data">
+            <input type="text" id="name" name="name" placeholder="Item Name" required />
+            <textarea id="description" name="description" placeholder="Item Description" required></textarea>
+            <input type="number" id="price" name="price" placeholder="Item Price" required />
+            <input type="file" id="image" name="image" accept="image/*" required />
+            <button type="submit">Upload</button>
+        </form>
+
+        <div id="item-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
